@@ -14,15 +14,9 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/git/${APP_NAME}/pal-platform/LICENSE;md5=$
 # Patches for quilt goes to files directory
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI = "${SOURCE_REPOSITORY};branch=${SOURCE_BRANCH};protocol=ssh;name=${APP_NAME};destsuffix=git/${APP_NAME}"
+SRC_URI = "${SOURCE_REPOSITORY};branch=${SOURCE_BRANCH};protocol=ssh;name=${APP_NAME};destsuffix=git/${APP_NAME} \
+    file://0001-switch-hwtrng-to-random.patch;patchdir=../git/${APP_NAME}/mbed-cloud-client"
 #    file://0001-change-hwrng-to-random.patch;striplevel=0;patchdir=../git/${APP_NAME}/mbed-cloud-client"
-#    file://0002-change_reboot_implementation.patch;striplevel=0;patchdir=../git/${APP_NAME}/mbed-cloud-client   \
-#    file://0003-disable_button_and_led.patch;striplevel=0;patchdir=../git/${APP_NAME}   \
-#    file://CloudClientExample.sh    \
-#    file://arm_update_cmdline.sh    \
-#    file://arm_update_activate.sh   \
-#    file://arm_update_partition.sh   \
-#    file://arm_update_active_details.sh"
 
 RDEPENDS_${PN} = " libstdc++ libgcc"
 

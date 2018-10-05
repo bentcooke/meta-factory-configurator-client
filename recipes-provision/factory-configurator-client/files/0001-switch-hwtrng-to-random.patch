@@ -17,7 +17,7 @@ index 128ed5a..abb7fc7 100644
      size_t actualRead = 0;
 -    char dev_random[] = "/dev/hwrng";
 +    //char dev_random[] = "/dev/hwrng";
-+    char dev_random[] = "/dev/random";
++    char dev_random[] = "/dev/urandom";
 +
  
      // Random generation can be really slow, entropy collection on a freshly booted device
